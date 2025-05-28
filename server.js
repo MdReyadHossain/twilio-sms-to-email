@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const PORT = process.env.PORT || 3005;
 
 const app = express();
 
@@ -51,10 +52,10 @@ app.post('/sms', async (req, res) => {
     }
 });
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
     res.send('SMS-to-Email Server is Running!');
 });
 
-app.listen(3005, () => {
-    console.log('Server running on port 3005');
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });

@@ -4,7 +4,7 @@
     "description": "Send email using SMS via Twilio and Node.js",
     "main": "server.js",
     "scripts": {
-        "start": "nodemon server.js --port 3005"
+        "start": "nodemon server.js"
     },
     "author": "Reyad",
     "license": "MIT",
