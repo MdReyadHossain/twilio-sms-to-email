@@ -44,7 +44,7 @@ app.post('/sms', async (req, res) => {
             subject: subject.trim(),
             text: body.trim()
         });
-
+        console.log(req.body);
         res.send(`<Response><Message>✅ Email sent to ${to.trim()}</Message></Response>`);
     } catch (error) {
         console.error('Email error:', error);
